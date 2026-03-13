@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洱海 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1920/600?random=26') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .tips { background: #e7f3ff; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #004085; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>洱海</h1>
+        <p>大理四景之一 · 高原明珠</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>大理的眼睛</h2>
+            <p>洱海位于大理白族自治州大理市，是云南省第二大淡水湖，因形状像耳朵而得名。洱海湖面海拔1972米，面积约250平方公里，最深处达21米。洱海是大理"风花雪月"四景之一"洱海月"的所在地。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>250</h3><p>平方公里</p></div>
+                <div class="info-item"><h3>1972</h3><p>米海拔</p></div>
+                <div class="info-item"><h3>21</h3><p>米最大深度</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>地理环境</h2>
+            <p>洱海是一个高原断陷湖泊，属于澜沧江水系。湖区气候温和，水量充沛，周边有苍山十八溪汇入。洱海不仅是大理的重要水源，也是大理旅游的核心区域。湖水清澈透明，周边群山环抱，风光秀丽。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景点</h2>
+            <p><strong>双廊镇</strong>：洱海东岸的热门小镇，有"大理风光在苍洱，苍洱风光在双廊"之称，可以远眺苍山十九峰。</p>
+            <p style="margin-top:1rem"><strong>小普陀</strong>：洱海中的一座小岛，岛上有观音阁，是洱海的标志性景观。</p>
+            <p style="margin-top:1rem"><strong>南诏风情岛</strong>：洱海中的岛屿，展示南诏文化，岛上有南诏行宫。</p>
+            <p style="margin-top:1rem"><strong>喜洲古镇</strong>：洱海西岸的千年古镇，保存了大量白族传统建筑。</p>
+        </div>
+
+        <div class="section">
+            <h2>环海游玩</h2>
+            <p>环洱海游玩是到大理旅游的经典项目，全长约120公里，有多种方式：</p>
+            <ul style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li><strong>骑行</strong>：租自行车环海，全程约6-8小时，深度体验沿途风景</li>
+                <li><strong>自驾</strong>：环海东路和西路都是景观大道，全程约3-4小时</li>
+                <li><strong>游船</strong>：洱海游船可以欣赏湖光山色，全程约2小时</li>
+                <li><strong>电瓶车</strong>：租电瓶车环海，省力又便捷</li>
+            </ul>
+        </div>
+
+        <div class="tips">
+            <h3>💡 游玩贴士</h3>
+            <ul style="padding-left:1.5rem">
+                <li>建议游玩时间：1-2天</li>
+                <li>最佳旅游季节：春季和秋季</li>
+                <li>看日出推荐双廊或才村码头</li>
+                <li>看日落推荐海西廊道</li>
+                <li>骑行建议从大理古城出发，顺时针环海</li>
+                <li>带好防晒用品，洱海紫外线较强</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西双版纳 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1920/600?random=25') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .tips { background: #d4edda; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #155724; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>西双版纳</h1>
+        <p>热带雨林 · 傣族风情</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>理想而神奇的乐土</h2>
+            <p>西双版纳傣族自治州位于云南省最南端，是中国唯一的热带雨林自然保护区。"西双版纳"在傣语中意为"十二个行政区"，这里以热带雨林自然景观和傣族风情闻名于世，是中国热门旅游目的地之一。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>95%</h3><p>森林覆盖率</p></div>
+                <div class="info-item"><h3>5000</h3><p>多种植物</p></div>
+                <div class="info-item"><h3>100+</h3><p>种野生动物</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>热带雨林</h2>
+            <p>西双版纳是中国热带雨林保存最完整的地区，有"植物王国"和"动物王国"之称。这里有高达80米的望天树，有"见血封喉"的箭毒木，有巨大的热带花卉，还有亚洲象、绿孔雀等珍稀动物。西双版纳热带雨林的热带jungle风光，让游客仿佛置身异国。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景点</h2>
+            <p><strong>中科院西双版纳热带植物园</strong>：中国最大、收集物种最丰富的热带植物园，有13000多种植物。</p>
+            <p style="margin-top:1rem"><strong>野象谷</strong>：中国唯一可以近距离看到野生亚洲象的地方，有驯象表演。</p>
+            <p style="margin-top:1rem"><strong>原始森林公园</strong>：距离景洪最近的热带雨林，有孔雀放飞、沟谷雨林等景点。</p>
+            <p style="margin-top:1rem"><strong>傣族园</strong>：保存最完好的傣族村寨，可以体验傣族日常生活和泼水节。</p>
+        </div>
+
+        <div class="section">
+            <h2>傣族文化</h2>
+            <p>西双版纳是傣族的主要聚居区。傣族有着独特的文化传统：</p>
+            <ul style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li><strong>泼水节</strong>：傣族最盛大的节日，相当于傣族新年</li>
+                <li><strong>孔雀舞</strong>：傣族传统舞蹈，优美典雅</li>
+                <li><strong>竹楼</strong>：傣族传统民居，楼上住人，楼下堆放杂物</li>
+                <li><strong>傣族菜</strong>：以酸辣为主，特色菜肴有香茅草烤鱼、菠萝饭等</li>
+            </ul>
+        </div>
+
+        <div class="tips">
+            <h3>💡 游玩贴士</h3>
+            <ul style="padding-left:1.5rem">
+                <li>最佳旅游时间：11月-次年4月（干季）</li>
+                <li>建议游玩时间：3-4天</li>
+                <li>温度较高，带好防晒霜和遮阳帽</li>
+                <li>雨林蚊虫多，建议穿长袖长裤</li>
+                <li>可品尝傣族特色烧烤和热带水果</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

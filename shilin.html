@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石林风景区 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/600?random=23') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #636363 0%, #a2ab58 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .tips { background: #e7f3ff; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #004085; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>石林风景区</h1>
+        <p>天下第一奇观 · 喀斯特地貌</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>石林奇观</h2>
+            <p>石林风景区位于昆明市石林彝族自治县境内，是世界地质公园、世界自然遗产。被誉为"天下第一奇观"，是世界上喀斯特地貌演化历史最悠久、分布面积最广、类型最齐全的地区。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>3亿</h3><p>年形成历史</p></div>
+                <div class="info-item"><h3>400</h3><p>平方公里</p></div>
+                <div class="info-item"><h3>5A</h3><p>级景区</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>地质奇观</h2>
+            <p>石林是地球演化的杰作，经历了从二叠纪时期海底沉积到第三纪陆地抬升的漫长过程。在地下水、地表水长期的溶蚀作用下，形成了今天我们看到的奇峰怪石。石林的石柱造型各异，有的像剑，有的像塔，有的像人物，栩栩如生。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景区</h2>
+            <p><strong>大石林</strong>：石林景区的核心区域，石峰最高大，景观最为壮观。主要景点有剑状石林、莲花峰、望峰亭等。</p>
+            <p style="margin-top:1rem"><strong>小石林</strong>：相对幽静，植被更好，以阿诗玛石像最为著名。</p>
+            <p style="margin-top:1rem"><strong>乃古石林</strong>：面积较小，但石质黝黑，故称"乃古"（彝语黑色之意），别有一番神秘感。</p>
+            <p style="margin-top:1rem"><strong>长湖</strong>：景区内的高原湖泊，湖水清澈，周围群山环抱，景色优美。</p>
+        </div>
+
+        <div class="section">
+            <h2>彝族文化</h2>
+            <p>石林是彝族撒尼人的聚居地。撒尼人能歌善舞，创造了丰富多彩的民族文化。著名的"阿诗玛"传说就诞生在这里。每年的彝族火把节是石林最热闹的节日，届时会举行歌舞、摔跤、斗牛等活动。</p>
+        </div>
+
+        <div class="tips">
+            <h3>💡 游玩贴士</h3>
+            <ul style="padding-left:1.5rem">
+                <li>建议游玩时间：半天至1天</li>
+                <li>最佳旅游季节：3-10月</li>
+                <li>门票：175元（含景区交通）</li>
+                <li>景区较大，建议购买景区观光车</li>
+                <li>穿舒适运动鞋，便于攀爬游览</li>
+                <li>可请当地撒尼人导游讲解，了解彝族文化</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

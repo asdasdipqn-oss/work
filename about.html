@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南旅游网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #e74c3c;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: var(--light);
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/1920/1080?random=1') center/cover;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 1.5rem;
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 2rem 5%;
+        }
+        .back-btn:hover {
+            background: #c0392b;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .section p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .info-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .info-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div>
+            <a href="index.html">返回首页</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>云南旅游网</h1>
+        <p>探索云南，感受自然与人文的完美融合</p>
+    </header>
+
+    <a href="index.html" class="back-btn">← 返回首页</a>
+
+    <div class="content">
+        <img src="https://picsum.photos/1200/600?random=10" alt="云南风景" class="hero-image">
+        
+        <div class="section">
+            <h2>关于云南</h2>
+            <p>云南省位于中国西南边陲，是中国面向东南亚、南亚开放的门户省份。云南以其独特的地理位置、丰富的自然资源和多元的民族文化而闻名于世。</p>
+            <p style="margin-top: 1rem;">这里有终年积雪的雪山、热带雨林、高原湖泊，也有25个少数民族和谐共处。从昆明的春城花海，到大理的风花雪月，从丽江的古城韵味，到西双版纳的热带风情，云南的每一处都是一道独特的风景线。</p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>25</h3>
+                    <p>个少数民族</p>
+                </div>
+                <div class="info-card">
+                    <h3>39.4万</h3>
+                    <p>平方公里</p>
+                </div>
+                <div class="info-card">
+                    <h3>8</h3>
+                    <p>个5A景区</p>
+                </div>
+                <div class="info-card">
+                    <h3>4700</h3>
+                    <p>米平均海拔</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>最佳旅游时间</h2>
+            <p>云南气候多样，不同地区最佳旅游时间不同：</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem; font-size: 1.1rem; color: #555;">
+                <li>昆明、大理：全年适宜，春季（3-5月）最佳</li>
+                <li>丽江：4-10月最佳，夏季凉爽</li>
+                <li>香格里拉：5-10月最佳，冬季较冷</li>
+                <li>西双版纳：11月-次年4月最佳</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>交通指南</h2>
+            <p>云南交通便利，有多种方式可达：</p>
+            <ul style="margin-top: 1rem; padding-left: 2rem; font-size: 1.1rem; color: #555;">
+                <li><strong>航空</strong>：昆明长水国际机场是主要枢纽，有国内外航线</li>
+                <li><strong>铁路</strong>：昆明为主要铁路枢纽，可到达大理、丽江等地</li>
+                <li><strong>公路</strong>：高速公路网发达，适合自驾游</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 彩云之南 - 云南旅游网</p>
+    </footer>
+</body>
+</html>

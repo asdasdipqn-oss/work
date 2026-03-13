@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲜花饼 - 云南美食</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/500?random=43') center/cover; height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 900px; margin: 0 auto; padding: 0 5% 3rem; }
+        .intro { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .intro h2 { color: var(--primary); margin-bottom: 1rem; }
+        .intro p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .highlight-box { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight-box h2 { color: white; margin-bottom: 1rem; }
+        .types { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .type-card { background: white; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .type-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>鲜花饼</h1>
+        <p>以花为馅的云南特色糕点</p>
+    </header>
+
+    <a href="index.html#food" class="back-btn">← 返回美食列表</a>
+
+    <div class="content">
+        <div class="highlight-box">
+            <h2>花香四溢的甜蜜</h2>
+            <p>鲜花饼是云南特有的传统糕点，以新鲜玫瑰花瓣为馅料，外皮酥脆，内馅香甜，带有浓郁的花香。是云南人最常送人的伴手礼，也是游客必带的云南特产。</p>
+        </div>
+
+        <div class="intro">
+            <h2>美食简介</h2>
+            <p>鲜花饼的历史可以追溯到清代，相传是昆明合香楼的点心师傅创制。选用云南特有的食用玫瑰花，每年4-5月玫瑰盛开时，将新鲜花瓣采摘下来，加入白糖、蜂蜜等腌制成果馅，再用酥皮包裹烤制而成。</p>
+        </div>
+
+        <div class="section">
+            <h2>制作工艺</h2>
+            <p><strong>玫瑰花馅</strong>：选用清晨采摘的新鲜玫瑰花瓣，加入白糖、蜂蜜、芝麻等搅拌腌制数小时。</p>
+            <p style="margin-top:1rem"><strong>酥皮</strong>：采用猪油和面粉制成多层酥皮，层次分明，酥脆可口。</p>
+            <p style="margin-top:1rem"><strong>烤制</strong>：将包好的饼坯放入烤箱烤制，表面金黄酥脆。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要种类</h2>
+            <div class="types">
+                <div class="type-card">
+                    <h3>玫瑰鲜花饼</h3>
+                    <p>最经典的口味，玫瑰花香浓郁</p>
+                </div>
+                <div class="type-card">
+                    <h3>茉莉鲜花饼</h3>
+                    <p>茉莉花香，清新淡雅</p>
+                </div>
+                <div class="type-card">
+                    <h3>桂花鲜花饼</h3>
+                    <p>桂花香甜，秋冬限定</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>品牌推荐</h2>
+            <p><strong>嘉华</strong>：云南本土知名品牌，鲜花饼销量第一</p>
+            <p><strong>潘祥记</strong>：老字号，味道传统</p>
+            <p><strong>玫瑰山谷</strong>：新兴品牌，包装精美</p>
+            <p style="margin-top:1rem">建议购买现烤的鲜花饼，味道比包装的更加鲜美。</p>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

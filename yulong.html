@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉龙雪山 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1920/600?random=24') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .tips { background: #fff3cd; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #856404; margin-bottom: 0.5rem; }
+        .warning { background: #f8d7da; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .warning h3 { color: #721c24; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>玉龙雪山</h1>
+        <p>北半球最南的雪山 · 冰川奇观</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>纳西族的神山</h2>
+            <p>玉龙雪山位于丽江市北端，是北半球最南的雪山，也是云南省最高峰。主峰扇子徒海拔5596米，尚未被人类征服。玉龙雪山是纳西族的神山，在纳西族东巴教中具有崇高地位。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>5596</h3><p>米海拔</p></div>
+                <div class="info-item"><h3>13</h3><p>座山峰</p></div>
+                <div class="info-item"><h3>5A</h3><p>级景区</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>冰川奇观</h2>
+            <p>玉龙雪山发育有现代冰川，其中最大的是白水一号冰川，长约2.7公里。冰川类型齐全，包括悬冰川、冰斗冰川等。游客可以乘坐索道到达4506米处的观景台，近距离欣赏冰川奇观。由于全球气候变化，冰川正在逐年退缩，更显其珍贵。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景点</h2>
+            <p><strong>冰川公园</strong>：乘坐大索道到达，可观赏冰川遗迹，4506米处有观景台。</p>
+            <p style="margin-top:1rem"><strong>蓝月谷</strong>：雪山脚下的高原湖泊，湖水呈蓝色，如蓝宝石般镶嵌在山谷中。</p>
+            <p style="margin-top:1rem"><strong>云杉坪</strong>：高原草甸，周围是原始云杉林，风景如画。</p>
+            <p style="margin-top:1rem"><strong>牦牛坪</strong>：另一处高原草甸，可以远眺雪山全貌。</p>
+        </div>
+
+        <div class="section">
+            <h2>索道信息</h2>
+            <p>玉龙雪山有三条索道：</p>
+            <ul style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li><strong>大索道（冰川公园索道）</strong>：可到达4506米观景台，票价140元</li>
+                <li><strong>云杉坪索道</strong>：票价60元</li>
+                <li><strong>牦牛坪索道</strong>：票价65元</li>
+            </ul>
+            <p style="margin-top:1rem">三条索道可单独购票，也可购买套票。</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ 注意事项</h3>
+            <ul style="padding-left:1.5rem">
+                <li>雪山海拔高，可能有高原反应，建议提前准备氧气瓶</li>
+                <li>山顶温度低（约-10℃），需携带厚外套</li>
+                <li>索道可能因天气原因停运，出行前关注天气预报</li>
+                <li>建议提前在景区官网预约购票</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

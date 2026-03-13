@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丽江古城 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/600?random=21') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .tips { background: #fff3cd; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #856404; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>丽江古城</h1>
+        <p>世界文化遗产 · 纳西族古城</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>纳西族的守护之城</h2>
+            <p>丽江古城位于云南省丽江市，是中国历史文化名城中唯一没有城墙的古城。古城始建于宋末元初，距今已有800多年历史。这里以其独特的水系、木结构建筑和纳西族文化而闻名于世。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>800+</h3><p>年历史</p></div>
+                <div class="info-item"><h3>世界遗产</h3><p>1997年列入</p></div>
+                <div class="info-item"><h3>25</h3><p>处明清古建筑</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>历史沿革</h2>
+            <p>丽江古城原名大研镇，是纳西族的聚居地。古城依山傍水而建，巧妙地利用了玉泉水作为主要水源，形成了"家家泉水、户户垂杨"的独特景观。古城内的建筑融合了纳西族、汉、白族等多民族风格，体现了多元文化的交融。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景点</h2>
+            <p><strong>四方街</strong>：古城的中心广场，是纳西族人民休闲娱乐的场所，每到傍晚都有纳西族老人在此跳民族舞。</p>
+            <p style="margin-top:1rem"><strong>木府</strong>：丽江土司的府邸，有"北有故宫，南有木府"之称，展示纳西族土司文化。</p>
+            <p style="margin-top:1rem"><strong>束河古镇</strong>：丽江古城的姊妹镇，更为宁静古朴，是茶马古道上的重要驿站。</p>
+            <p style="margin-top:1rem"><strong>黑龙潭</strong>：古城北部的美丽湖泊，可远眺玉龙雪山，是拍摄雪山倒影的绝佳地点。</p>
+        </div>
+
+        <div class="section">
+            <h2>纳西文化</h2>
+            <p>丽江古城是纳西族文化的核心载体。纳西族有独特的东巴文化，东巴文是目前世界上唯一仍在使用的象形文字。古城的纳西古乐更是闻名遐迩，被列入非物质文化遗产。</p>
+        </div>
+
+        <div class="tips">
+            <h3>💡 游玩贴士</h3>
+            <ul style="padding-left:1.5rem">
+                <li>建议游玩时间：1-2天</li>
+                <li>最佳游览时间：傍晚至夜间，灯火辉煌，氛围最佳</li>
+                <li>门票：免费（古城维护费80元）</li>
+                <li>建议请当地导游讲解，更深入了解纳西文化</li>
+                <li>古城内石板路多，建议穿舒适的鞋子</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

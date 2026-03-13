@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大理古城 - 云南旅游网</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/600?random=22') center/cover; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 5% 3rem; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .highlight { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight h2 { color: white; margin-bottom: 1rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .info-item { background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; text-align: center; }
+        .info-item h3 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .scenery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .scenery-item { text-align: center; }
+        .scenery-item img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
+        .scenery-item p { margin-top: 0.5rem; font-weight: bold; }
+        .tips { background: #d4edda; padding: 1.5rem; border-radius: 10px; margin-top: 1rem; }
+        .tips h3 { color: #155724; margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>大理古城</h1>
+        <p>风花雪月 · 白族风情</p>
+    </header>
+
+    <a href="index.html#attractions" class="back-btn">← 返回景点列表</a>
+
+    <div class="content">
+        <div class="highlight">
+            <h2>风花雪月之城</h2>
+            <p>大理古城位于云南省大理白族自治州大理市，是中国首批24个历史文化名城之一。古城背靠苍山，面朝洱海，以"下关风、上关花、苍山雪、洱海月"四景闻名于世，被称为"风花雪月"之城。</p>
+            <div class="info-grid">
+                <div class="info-item"><h3>600+</h3><p>年历史</p></div>
+                <div class="info-item"><h3>白族</h3><p>主要居民</p></div>
+                <div class="info-item"><h3>197.5</h3><p>平方公里</p></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>历史沿革</h2>
+            <p>大理古城始建于明洪武十五年（1382年），是古代南诏国和大理国的都城所在地。古城呈方形，开四门，城内保持了大量明清时期的建筑风格。白族人民在这片土地上创造了灿烂的文化，使大理成为白族文化的核心区。</p>
+        </div>
+
+        <div class="section">
+            <h2>四景介绍</h2>
+            <p><strong>下关风</strong>：下关位于大理市南部，风期长、风力强，是大理的一大自然奇观。</p>
+            <p style="margin-top:1rem"><strong>上关花</strong>：上关（花甸坝）鲜花盛开，四季如春，尤以杜鹃花最为著名。</p>
+            <p style="margin-top:1rem"><strong>苍山雪</strong>：苍山十九峰终年积雪不化，形成"银苍玉洱"的壮丽景观。</p>
+            <p style="margin-top:1rem"><strong>洱海月</strong>：洱海如月，每到中秋之夜，月亮倒映在湖中，景色绝美。</p>
+        </div>
+
+        <div class="section">
+            <h2>主要景点</h2>
+            <div class="scenery">
+                <div class="scenery-item">
+                    <img src="https://picsum.photos/300/200?random=31" alt="洋人街">
+                    <p>洋人街</p>
+                </div>
+                <div class="scenery-item">
+                    <img src="https://picsum.photos/300/200?random=32" alt="三塔">
+                    <p>崇圣寺三塔</p>
+                </div>
+                <div class="scenery-item">
+                    <img src="https://picsum.photos/300/200?random=33" alt="人民路">
+                    <p>人民路</p>
+                </div>
+            </div>
+            <p style="margin-top:1rem"><strong>洋人街</strong>：古城最繁华的街道，汇集了众多酒吧、餐厅和客栈。</p>
+            <p style="margin-top:0.5rem"><strong>崇圣寺三塔</strong>：大理标志性建筑，始建于南诏时期，是佛教传入大理的重要见证。</p>
+        </div>
+
+        <div class="tips">
+            <h3>💡 游玩贴士</h3>
+            <ul style="padding-left:1.5rem">
+                <li>建议游玩时间：1-2天</li>
+                <li>最佳旅游季节：春季（3-5月）和秋季（9-11月）</li>
+                <li>门票：古城免费，三塔公园121元</li>
+                <li>可租自行车环洱海骑行，体验沿途风景</li>
+                <li>品尝白族三道茶，感受白族待客之道</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>

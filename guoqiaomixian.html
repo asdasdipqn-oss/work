@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过桥米线 - 云南美食</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/500?random=41') center/cover; height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 900px; margin: 0 auto; padding: 0 5% 3rem; }
+        .intro { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .intro h2 { color: var(--primary); margin-bottom: 1rem; }
+        .intro p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .section p { font-size: 1.05rem; color: #555; line-height: 1.8; }
+        .highlight-box { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight-box h2 { color: white; margin-bottom: 1rem; }
+        .story { border-left: 4px solid var(--primary); padding-left: 1.5rem; margin: 1.5rem 0; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>过桥米线</h1>
+        <p>云南最具代表性的传统美食</p>
+    </header>
+
+    <a href="index.html#food" class="back-btn">← 返回美食列表</a>
+
+    <div class="content">
+        <div class="highlight-box">
+            <h2>天下第一碗</h2>
+            <p>过桥米线是云南最具代表性的美食，已被列入非物质文化遗产。这道美食以其独特的食用方式、鲜美的汤底和丰富的配料而闻名，被誉为"天下第一碗"。</p>
+        </div>
+
+        <div class="intro">
+            <h2>美食简介</h2>
+            <p>过桥米线源于云南蒙自地区，至今已有100多年历史。相传一位贤惠的妻子为了让在岛上读书的丈夫吃到热汤面，每天过桥送饭，因此得名"过桥米线"。</p>
+            <div class="story">
+                <p><strong>典故来源</strong>：清代年间，蒙自县城外有一座小岛，书生在此苦读，妻子每天送饭都要经过一座小桥。为了让丈夫吃到热乎的饭菜，她把鸡汤装在瓦罐里，由于汤上浮着一层油保温，米线和配菜另外放置，吃的时候再倒入汤中烫熟。这便是过桥米线的由来。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>制作工艺</h2>
+            <p><strong>汤底</strong>：采用老母鸡、筒子骨、火腿等食材精心熬制8小时以上，汤色乳白，味道鲜美。</p>
+            <p style="margin-top:1rem"><strong>米线</strong>：选用优质大米制成的米线，口感爽滑有韧性，不易断碎。</p>
+            <p style="margin-top:1rem"><strong>配料</strong>：配料丰富多样，通常包括：
+            </p>
+            <ul style="margin-top:0.5rem; padding-left:2rem; color:#555">
+                <li>生肉片：里脊肉、鸡胸肉</li>
+                <li>熟肉片：火腿、叉烧</li>
+                <li>配菜：豆芽、韭菜、葱姜丝</li>
+                <li>其他：鹌鹑蛋、豆腐皮、鸡纵菌</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>正确食用方式</h2>
+            <p>过桥米线的食用有其独特的仪式感：</p>
+            <ol style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li><strong>先放肉类</strong>：先把生肉片放入汤中，利用油的温度烫熟</li>
+                <li><strong>再放配菜</strong>：依次放入豆芽、韭菜等配菜</li>
+                <li><strong>后放米线</strong>：最后放入米线，烫1-2分钟即可食用</li>
+                <li><strong>先喝汤</strong>：米线吃完后喝一口鲜汤，回味无穷</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>推荐店铺</h2>
+            <p><strong>昆明</strong>：桥香园、建新园、福华园</p>
+            <p><strong>蒙自</strong>：过桥米线发源地，最为正宗</p>
+            <p><strong>大理</strong>：大理古城内有多家过桥米线店</p>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>
