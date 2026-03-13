@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩云之南 - 云南旅游网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e74c3c;
+            --secondary: #2ecc71;
+            --accent: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1920') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        header .cta-btn {
+            padding: 1rem 3rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        header .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Attractions */
+        #attractions {
+            background: var(--light);
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .attraction-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .attraction-card .content {
+            padding: 1.5rem;
+        }
+
+        .attraction-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .attraction-card .location {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .attraction-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Food */
+        #food {
+            background: #fff;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .food-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            transition: transform 0.3s;
+        }
+
+        .food-card:hover {
+            transform: scale(1.05);
+        }
+
+        .food-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .food-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .food-card p {
+            color: #666;
+        }
+
+        /* Culture */
+        #culture {
+            background: var(--dark);
+            color: white;
+        }
+
+        #culture .section-title h2,
+        #culture .section-title p {
+            color: white;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .culture-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            transition: background 0.3s;
+        }
+
+        .culture-card:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .culture-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .culture-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .culture-card p {
+            opacity: 0.8;
+        }
+
+        /* Routes */
+        #routes {
+            background: var(--light);
+        }
+
+        .routes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .route-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .route-card .route-header {
+            background: var(--gradient);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .route-card .route-header h3 {
+            font-size: 1.3rem;
+        }
+
+        .route-card .route-header .days {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .route-card .route-body {
+            padding: 1.5rem;
+        }
+
+        .route-card .route-body ul {
+            list-style: none;
+        }
+
+        .route-card .route-body li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .route-card .route-body li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact */
+        #contact {
+            background: #fff;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 2rem;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌈 彩云之南</div>
+        <ul>
+            <li><a href="#about">关于云南</a></li>
+            <li><a href="#attractions">热门景点</a></li>
+            <li><a href="#food">特色美食</a></li>
+            <li><a href="#culture">民族文化</a></li>
+            <li><a href="#routes">旅游线路</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>彩云之南</h1>
+        <p>探索云南，感受自然与人文的完美融合</p>
+        <a href="#attractions" class="cta-btn">开始探索</a>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <div class="section-title">
+            <h2>关于云南</h2>
+            <p>云南省位于中国西南边陲，是一个多民族聚居的省份</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>高原明珠 多彩云南</h3>
+                <p>云南以其独特的地理位置、丰富的自然资源和多元的民族文化而闻名于世。这里有终年积雪的雪山、热带雨林、高原湖泊，也有25个少数民族和谐共处。</p>
+                <p style="margin-top: 1rem;">从昆明的春城花海，到大理的风花雪月，从丽江的古城韵味，到西双版纳的热带风情，云南的每一处都是一道独特的风景线。</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="number">25</div>
+                        <div>个少数民族</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">39.4</div>
+                        <div>万平方公里</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">8</div>
+                        <div>个5A景区</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600" alt="云南风景" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions -->
+    <section id="attractions">
+        <div class="section-title">
+            <h2>热门景点</h2>
+            <p>云南必去的旅游胜地</p>
+        </div>
+        <div class="attractions-grid">
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1580821810645-11a8fd7c9f33?w=400" alt="丽江古城">
+                <div class="content">
+                    <h3>丽江古城</h3>
+                    <div class="location">📍 丽江市</div>
+                    <p>世界文化遗产，拥有800多年历史的纳西族古城，小桥流水人家，夜晚灯火辉煌。</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1563268097-1ee5d1b8a8b5?w=400" alt="大理古城">
+                <div class="content">
+                    <h3>大理古城</h3>
+                    <div class="location">📍 大理市</div>
+                    <p>"风花雪月"之城，背靠苍山，面朝洱海，白族风情浓郁，历史底蕴深厚。</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1537531383496-f4749a4b8590?w=400" alt="石林">
+                <div class="content">
+                    <h3>石林风景区</h3>
+                    <div class="location">📍 昆明市石林县</div>
+                    <p>世界地质公园，世界自然遗产，奇特的喀斯特地貌景观，被誉为"天下第一奇观"。</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="玉龙雪山">
+                <div class="content">
+                    <h3>玉龙雪山</h3>
+                    <div class="location">📍 丽江市</div>
+                    <p>北半球最南的雪山，拥有险峻的冰川景观，乘坐索道可到达4506米观景台。</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=400" alt="西双版纳">
+                <div class="content">
+                    <h3>西双版纳</h3>
+                    <div class="location">📍 西双版纳州</div>
+                    <p>中国唯一的热带雨林自然保护区，傣族风情，野象谷、热带植物园值得一游。</p>
+                </div>
+            </div>
+            <div class="attraction-card">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400" alt="洱海">
+                <div class="content">
+                    <h3>洱海</h3>
+                    <div class="location">📍 大理市</div>
+                    <p>大理"四景"之一的高原湖泊，湖水清澈，周边景点众多，骑行环海是最佳体验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food -->
+    <section id="food">
+        <div class="section-title">
+            <h2>特色美食</h2>
+            <p>品味云南的舌尖诱惑</p>
+        </div>
+        <div class="food-grid">
+            <div class="food-card">
+                <div class="icon">🍜</div>
+                <h3>过桥米线</h3>
+                <p>云南最具代表性的美食，鸡汤为底，配以各种食材，鲜美可口</p>
+            </div>
+            <div class="food-card">
+                <div class="icon">🥘</div>
+                <h3>汽锅鸡</h3>
+                <p>利用蒸汽烹饪的鸡肉汤品，原汁原味，营养丰富</p>
+            </div>
+            <div class="food-card">
+                <div class="icon">🍖</div>
+                <h3>宣威火腿</h3>
+                <p>云南著名特产，色泽红润，香味浓郁，是馈赠佳品</p>
+            </div>
+            <div class="food-card">
+                <div class="icon">🥗</div>
+                <h3>野生菌</h3>
+                <p>云南野生菌种类繁多，松茸、牛肝菌等是珍贵的天然美食</p>
+            </div>
+            <div class="food-card">
+                <div class="icon">🍚</div>
+                <h3>竹筒饭</h3>
+                <p>傣族特色美食，竹子的清香与米饭完美融合</p>
+            </div>
+            <div class="food-card">
+                <div class="icon">🫓</div>
+                <h3>鲜花饼</h3>
+                <p>云南特色糕点，以新鲜玫瑰花瓣入馅，香甜酥脆</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture -->
+    <section id="culture">
+        <div class="section-title">
+            <h2>民族文化</h2>
+            <p>25个少数民族和谐共处，多元文化交融</p>
+        </div>
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="icon">🏠</div>
+                <h3>纳西族</h3>
+                <p>丽江古城的守护者，东巴文化独特，摩梭走婚习俗</p>
+            </div>
+            <div class="culture-card">
+                <div class="icon">🎭</div>
+                <h3>白族</h3>
+                <p>大理主要居民，三道茶待客，跳菜舞独特</p>
+            </div>
+            <div class="culture-card">
+                <div class="icon">🏹</div>
+                <h3>傣族</h3>
+                <p>西双版纳主体民族，泼水节闻名，孔雀舞优美</p>
+            </div>
+            <div class="culture-card">
+                <div class="icon">🪕</div>
+                <h3>彝族</h3>
+                <p>云南人口最多的少数民族，火把节热闹，漆器精美</p>
+            </div>
+            <div class="culture-card">
+                <div class="icon">🎪</div>
+                <h3>藏族</h3>
+                <p>迪庆地区主要居民，藏族佛教文化，酥油茶待客</p>
+            </div>
+            <div class="culture-card">
+                <div class="icon">🧵</div>
+                <h3>苗族</h3>
+                <p>苗族银饰精美，蜡染技艺高超，芦笙舞独特</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes -->
+    <section id="routes">
+        <div class="section-title">
+            <h2>精选线路</h2>
+            <p>为您推荐经典旅游路线</p>
+        </div>
+        <div class="routes-container">
+            <div class="route-card">
+                <div class="route-header">
+                    <h3>昆大丽经典线</h3>
+                    <div class="days">推荐 5-6 天</div>
+                </div>
+                <div class="route-body">
+                    <ul>
+                        <li>📍 昆明 - 石林风景区</li>
+                        <li>📍 昆明 - 云南大学/翠湖</li>
+                        <li>📍 大理 - 洱海骑行</li>
+                        <li>📍 大理 - 苍山索道</li>
+                        <li>📍 丽江 - 丽江古城</li>
+                        <li>📍 丽江 - 玉龙雪山</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-header">
+                    <h3>西双版纳热带风情线</h3>
+                    <div class="days">推荐 3-4 天</div>
+                </div>
+                <div class="route-body">
+                    <ul>
+                        <li>📍 景洪 - 热带花卉园</li>
+                        <li>📍 景洪 - 野象谷</li>
+                        <li>📍 景洪 - 原始森林公园</li>
+                        <li>📍 勐腊 - 中科院植物园</li>
+                        <li>📍 景洪 - 告庄夜市</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="route-card">
+                <div class="route-header">
+                    <h3>香格里拉秘境线</h3>
+                    <div class="days">推荐 3-4 天</div>
+                </div>
+                <div class="route-body">
+                    <ul>
+                        <li>📍 丽江 - 长江第一湾</li>
+                        <li>📍 虎跳峡 - 徒步探险</li>
+                        <li>📍 香格里拉 - 普达措国家公园</li>
+                        <li>📍 香格里拉 - 松赞林寺</li>
+                        <li>📍 香格里拉 - 古城独克宗</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>开启云南之旅</h2>
+            <p>联系我们，获取更多旅游信息和专属定制服务</p>
+        </div>
+        <a href="tel:400-888-8888" class="contact-btn">联系我们</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 彩云之南 - 云南旅游网 | 让旅行成为一种享受</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.attraction-card, .food-card, .culture-card, .route-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
