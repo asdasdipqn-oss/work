@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>野生菌 - 云南美食</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #e74c3c; --dark: #2c3e50; --light: #ecf0f1; }
+        body { font-family: 'Microsoft YaHei', sans-serif; line-height: 1.6; color: #333; background: var(--light); }
+        nav { position: fixed; top: 0; width: 100%; background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
+        nav a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; }
+        header { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1920/500?random=62') center/cover; height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        .back-btn { display: inline-block; padding: 0.5rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 5px; margin: 2rem 5%; }
+        .content { max-width: 900px; margin: 0 auto; padding: 0 5% 3rem; }
+        .intro { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .intro h2 { color: var(--primary); margin-bottom: 1rem; }
+        .intro p { font-size: 1.1rem; color: #555; line-height: 1.8; }
+        .section { background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section h2 { color: var(--primary); margin-bottom: 1rem; }
+        .highlight-box { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); color: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; }
+        .highlight-box h2 { color: white; margin-bottom: 1rem; }
+        .mushroom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .mushroom-card { background: var(--light); padding: 1.5rem; border-radius: 10px; text-align: center; }
+        .mushroom-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">🌈 彩云之南</a>
+        <div><a href="index.html">返回首页</a></div>
+    </nav>
+
+    <header>
+        <h1>野生菌</h1>
+        <p>大自然的馈赠 · 天然美食</p>
+    </header>
+
+    <a href="index.html#food" class="back-btn">← 返回美食列表</a>
+
+    <div class="content">
+        <div class="highlight-box">
+            <h2>山珍美味</h2>
+            <p>云南是中国野生菌种类最多的省份，已知食用菌超过600种。野生菌是大自然对云南的馈赠，每到雨季（6-10月），云南的山林里便长出各种珍贵的野生菌，成为餐桌上最受欢迎的美味。</p>
+        </div>
+
+        <div class="intro">
+            <h2>美食简介</h2>
+            <p>云南野生菌生长在海拔1500-3000米的高原山区，环境优越，无污染。云南人吃菌子的历史悠久，积累了丰富的采摘和烹饪经验。野生菌不仅味道鲜美，而且营养丰富，具有很高的药用价值。</p>
+        </div>
+
+        <div class="section">
+            <h2>珍贵菌种</h2>
+            <div class="mushroom-grid">
+                <div class="mushroom-card">
+                    <h3>松茸</h3>
+                    <p>最珍贵的食用菌，被誉为"菌中之王"</p>
+                </div>
+                <div class="mushroom-card">
+                    <h3>牛肝菌</h3>
+                    <p>产量最大的野生菌，味道鲜美</p>
+                </div>
+                <div class="mushroom-card">
+                    <h3>鸡枞</h3>
+                    <p>白蚁共生菌，鸡肉香味</p>
+                </div>
+                <div class="mushroom-card">
+                    <h3>干巴菌</h3>
+                    <p>香味独特，价格昂贵</p>
+                </div>
+                <div class="mushroom-card">
+                    <h3>青头菌</h3>
+                    <p>常见菌种，口感细腻</p>
+                </div>
+                <div class="mushroom-card">
+                    <h3>鸡油菌</h3>
+                    <p>颜色金黄，香味浓郁</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>食用方法</h2>
+            <p>野生菌的烹饪方法多种多样：</p>
+            <ul style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li><strong>炒制</strong>：用干辣椒、大蒜炒制，是最常见的吃法</li>
+                <li><strong>炖汤</strong>：与鸡肉、排骨同炖，汤鲜味美</li>
+                <li><strong>火锅</strong>：野生菌火锅是云南特色</li>
+                <li><strong>油炸</strong>：制成油炸菌，可保存一年</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>食用安全</h2>
+            <p style="color:#c0392b"><strong>重要提示</strong>：云南每年都有因食用野生菌中毒的事件，请注意：</p>
+            <ul style="margin-top:1rem; padding-left:2rem; color:#555">
+                <li>只采摘和购买自己认识的菌类</li>
+                <li>不认识的野生菌一律不食用</li>
+                <li>一定要炒熟煮透</li>
+                <li>不要多种菌类混在一起食用</li>
+                <li>食用野生菌后不要饮酒</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>推荐产地</h2>
+            <p><strong>楚雄</strong>：云南野生菌主产区，品种最多</p>
+            <p><strong>迪庆</strong>：松茸主产地，品质优良</p>
+            <p><strong>昆明</strong>：野生菌交易市场集中</p>
+        </div>
+    </div>
+
+    <footer><p>© 2026 彩云之南 - 云南旅游网</p></footer>
+</body>
+</html>
